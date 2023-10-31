@@ -97,6 +97,11 @@ on property:twrp.decrypt.done=true
     stop servicemanager
     stop hwservicemanager
 
+on property:sys.usb.config=fastboot
+    start servicemanager
+    start hwservicemanager
+    restart fastbootd
+
 on boot
     # Enable Power modes and set the CPU Freq Sampling rates
     write /proc/hps/enabled 0
