@@ -106,7 +106,7 @@ jobs:
 
     - name: Set variables
       run: |
-        echo "::set-output name=date::$(date +%F)"
+        echo date::$(date +%F)" >> $GITHUB_OUTPUT
       id: var
       
     - name: Install repo
