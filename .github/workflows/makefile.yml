@@ -67,11 +67,6 @@ jobs:
         sudo apt-get update
         sudo apt-get -y install --reinstall build-essential
 
-    - name: Set variables
-      run: |
-        echo "$(date +%F)" >> $GITHUB_OUTPUT
-      id: var
-      
     - name: Install repo
       run: |
         mkdir ~/bin
