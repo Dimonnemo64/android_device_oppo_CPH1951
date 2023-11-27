@@ -79,7 +79,7 @@ jobs:
         PATH=~/bin:$PATH
         mkdir workspace
         cd workspace
-        echo "::set-output name=pwd::$(pwd)"
+        run: echo "pwd::$(pwd)" >> $GITHUB_OUTPUT
         git config --global user.name "Dimonnemo64"
         git config --global user.email "dimonnemo63@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
