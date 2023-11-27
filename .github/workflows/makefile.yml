@@ -69,7 +69,7 @@ jobs:
 
     - name: Set variables
       run: |
-        echo "date::$(date +%F)" >> $GITHUB_OUTPUT
+        echo "$(date +%F)" >> $GITHUB_OUTPUT
       id: var
       
     - name: Install repo
